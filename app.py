@@ -3,9 +3,12 @@ import streamlit as st
 import requests
 import json
 from streamlit_chat import message
+import os 
+
+
 
 # Set your API key
-openai.api_key ='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'
+api_key=openai.api_key ='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'
 
 
 
@@ -14,7 +17,7 @@ openai.api_key ='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'
 def generate_response(prompt):
     # Set the API endpoint
     api_endpoint = "https://api.openai.com/v1/completions"
-    api_key = openai.api_key
+    # api_key = openai.api_key
     
     # Set the headers for the request
     headers = {
@@ -31,8 +34,8 @@ def generate_response(prompt):
         "top_p": 1,
         "frequency_penalty": 0,
         "presence_penalty": 0,
-        "top_p":1,
-        "frequency_penalty":0
+        # "top_p":1,
+        # "frequency_penalty":0
     }
     
     # Send the request
@@ -87,4 +90,3 @@ if st.session_state["generated"]:
     for i in range(len(st.session_state["generated"]) - 1, -1, -1):
         message(st.session_state["generated"][i], key='message'+str(i))
         message(st.session_state["past"][i], is_user=True, key=str(i) + "user")
-
