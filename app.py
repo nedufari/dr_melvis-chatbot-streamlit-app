@@ -5,7 +5,7 @@ import json
 from streamlit_chat import message
 
 # Set your API key
-openai.api_key ='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'
+openai.api_key ='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'
 
 
 
@@ -53,7 +53,7 @@ def generate_response(prompt):
 
 st.title("Dr Melvis Health Diagnostic Chatbot")
 
-DEFAULT_RESPONSE = "Hello, my name is Dr. Melvis, i am a health diagnonisgic chatbot bult by Anolue Francis and Zainab. i am not perfect yet, but trust i be of the best service to you in any form i can. ?"
+DEFAULT_RESPONSE = "Hello, my name is Dr. Melvis, i am a health diagnonistic chatbot bult by Anolue Francis and Zainab. i am here to help with all your healthcare service and also help dianoise a well detailed symptom explaination to the best of my ability?"
 
 # Display the default response in the chat interface
 message(DEFAULT_RESPONSE, key='message_default')
@@ -70,7 +70,7 @@ if "past" not in st.session_state:
 
 st.empty()
 def get_text():
-    input_text = st.text_input("patient", "Hello doctor", key="input")
+    input_text = st.text_input("patient", key="input")
     return input_text
 
 user_input = get_text()
