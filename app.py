@@ -5,7 +5,7 @@ import json
 from streamlit_chat import message
 
 # Set your API key
-openai.api_key ='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'
+openai.api_key ='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'
 
 
 
