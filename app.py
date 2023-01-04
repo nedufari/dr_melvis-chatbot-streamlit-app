@@ -3,12 +3,15 @@ import streamlit as st
 import requests
 import json
 from streamlit_chat import message
-import os 
+from dotenv import dotenv_values
 
-
+dotenv=dotenv_values()
+api_key=dotenv.get("API_KEY")
 
 # Set your API key
-api_key=openai.api_key ='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'
+openai.api_key = api_key
+print(api_key) 
+
 
 
 
